@@ -48,6 +48,23 @@
                 }
             }
         }
+
+        .info {
+            position: absolute;
+            right: 0;
+            font-size: px(9);
+            color: #6d929d;
+            padding: 0 px(13);
+
+            .icon {
+                fill: #6d929d;
+
+                &:last-child {
+                    margin-left: px(7);
+                    transform: scale(1.25);
+                }
+            }
+        }
     }
 
     main {
