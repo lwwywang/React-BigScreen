@@ -1,8 +1,7 @@
 import React from 'react';
-import {Switch, HashRouter} from 'react-router-dom';
-import {Route} from 'react-router-dom';
-import {Home} from './pages/home';
-import {Config} from './pages/config';
+import { Switch, HashRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Home } from './pages/home';
 
 function App() {
 
@@ -11,10 +10,7 @@ function App() {
       <HashRouter>
         <Switch>
           <Route exact path="/">
-            <Home/>
-          </Route>
-          <Route exact path="/config">
-            <Config/>
+            <Home />
           </Route>
         </Switch>
       </HashRouter>
