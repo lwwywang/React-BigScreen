@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <title>大屏可视化项目</title>
+  <script>
+    const clientWidth = document.documentElement.clientWidth
+    const clientHeight = document.documentElement.clientHeight
+    // 判断页面宽高
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ? clientHeight * (16 / 9) : clientWidth
+    const pageHeight = pageWidth / (16 / 9)
+    const string = `<style>html{
+      font-size: ${pageWidth / 100}px
+    }</style>`
+    document.write(string)
+  </script>
+<script type="module" crossorigin src="/assets/index.73bc813c.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.4471f72b.js">
+  <link rel="stylesheet" href="/assets/index.7b70df72.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    // 直接访问根元素的内联样式（inline style）
+    root.style.width = pageWidth + 'px'
+    root.style.height = pageHeight + 'px'
+    // 使用JavaScript设置根元素的宽高，并使其上下居中
+    root.style.marginTop = (clientHeight - pageHeight) / 2 + 'px'
+  </script>
+  
+</body>
+
+</html>
