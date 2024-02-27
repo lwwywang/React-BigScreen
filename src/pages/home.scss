@@ -76,11 +76,12 @@
             ". box1 . box2 . box3" 1fr / 14fr 168fr 28fr 302fr 28fr 168fr 14fr;
 
         >section {
-            border: 1px solid #0764bc;
+            border: 1px solid #165374;
             border-radius: 4px;
             position: relative;
             box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
-            background: #0c1139;
+            background: rgba(31, 59, 70, 0.35);
+
 
             &::before {
                 content: '';
@@ -148,19 +149,61 @@
 
         .section2 {
             grid-area: box2;
+
+            .chart {
+                height: px(240);
+            }
+
+            >p {
+                font-size: px(6);
+                color: #eee;
+                text-align: end;
+            }
+
+            >.formWrapper {
+                display: flex;
+                justify-content: space-between;
+
+                div {
+                    margin-top: px(15);
+                    width: px(90);
+                    height: px(46);
+                    border: 1px solid #165374;
+                    background: rgba(31, 59, 70, 0.35);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: px(6);
+                    color: #aaa;
+                    position: relative;
+
+                    p {
+                        margin-bottom: px(2);
+                        font-size: px(15);
+                        color: #eee;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        box-shadow: 7px 0 0 -6px #103852,
+                            -7px 0 0 -6px #103852,
+                            0 7px 0 -6px #103852,
+                            0 -7px 0 -6px #103852, ;
+                    }
+                }
+            }
         }
 
         .section3 {
             grid-area: box3;
         }
 
-        .section4 {
-            grid-area: box4;
-        }
-
-        .section5 {
-            grid-area: box5;
-        }
 
     }
 }

@@ -7,6 +7,7 @@ import * as echarts from 'echarts';
 import { Chart1 } from '../charts/Chart1';
 import { Chart2 } from '../charts/Chart2';
 import { Chart3 } from '../charts/Chart3';
+import { Chart4 } from '../charts/Chart4';
 
 export const Home = () => {
   return (
@@ -25,10 +26,11 @@ export const Home = () => {
           <Chart2 />
           <Chart3 />
         </section>
-        <section className="bordered section2"></section>
-        <section className="bordered section3"></section>
-        <section className="bordered section4"></section>
-        <section className="bordered section5"></section>
+        <section className="section2">
+          <Chart4 />
+        </section>
+        <section className="section3">
+        </section>
       </main>
     </div>
   );
