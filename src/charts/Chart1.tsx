@@ -1,20 +1,15 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import { Title } from '../shared/Title';
+import { createEchartsOptions } from '../shared/createEchartsOptions';
 
 
 const px = n => n / 800 * (window as any).pageWidth;
 export const Chart1 = () => {
   const divRef = useRef(null);
   useEffect(() => {
-    const myChart = echarts.init(divRef.current);
-    myChart.setOption({
-      textStyle: {
-        fontSize: px(6),
-        color: '#79839E'
-      },
-      title: {show: false},
-      legend: {show: false},
+    var myChart = echarts.init(divRef.current);
+    myChart.setOption(createEchartsOptions({
       xAxis: {
         data: ['大南山镇', '下架山镇', '池尾街道', '大坝镇', '洪阳镇', '麒麟镇', '里湖镇', '燎原镇'],
         axisTick: {show: false},
@@ -54,7 +49,7 @@ export const Chart1 = () => {
         type: 'bar',
         data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
       }]
-    });
+    }));
   }, []);
   return (
     <div className="chart1">
