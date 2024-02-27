@@ -7,9 +7,14 @@ import { createEchartsOptions } from '../shared/createEchartsOptions';
 const px = n => n / 800 * (window as any).pageWidth;
 export const Chart1 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    const myChart = echarts.init(divRef.current);
-    myChart.setOption(createEchartsOptions({
+  const myChart = useRef(null);
+  const data = {
+    1: [27, 20, 30, 25, 15, 26, 20],
+    2: [17, 26, 22, 29, 17, 21, 30],
+    3: [14, 23, 30, 18, 20, 23, 14]
+  };
+  const render = data => {
+    myChart.current.setOption(createEchartsOptions({
       xAxis: {
         data: ['大南山镇', '下架山镇', '池尾街道', '大坝镇', '洪阳镇', '麒麟镇', '里湖镇', '燎原镇'],
         axisTick: {show: false},
@@ -47,9 +52,16 @@ export const Chart1 = () => {
       },
       series: [{
         type: 'bar',
-        data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
+        data: data
       }]
     }));
+  };
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    render(data[1]);
+    setInterval(() => {
+      render(data[Math.ceil(Math.random() * 3)]);
+    }, 2000);
   }, []);
   return (
     <div className="chart1">
