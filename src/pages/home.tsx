@@ -6,6 +6,7 @@ import { Icon } from '../components/Icon';
 import * as echarts from 'echarts';
 import { Chart1 } from '../charts/Chart1';
 import { Chart2 } from '../charts/Chart2';
+import { Chart3 } from '../charts/Chart3';
 
 export const Home = () => {
   return (
@@ -22,6 +23,7 @@ export const Home = () => {
         <section className="section1">
           <Chart1 />
           <Chart2 />
+          <Chart3 />
         </section>
         <section className="bordered section2"></section>
         <section className="bordered section3"></section>
