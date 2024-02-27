@@ -12,7 +12,7 @@ export const Statistic = () => {
                 arr2.splice(2, 0, ',');
                 return arr2.join('');
             });
-        }, 3200);
+        }, 2200);
         setInterval(n => {
             setNum2(n => {
                 const arr1 = n.split('');
@@ -21,7 +21,7 @@ export const Statistic = () => {
                 arr2.splice(3, 0, ',');
                 return arr2.join('');
             });
-        }, 1800);
+        }, 1400);
     }, []);
     return (
         <div className="formWrapper">
