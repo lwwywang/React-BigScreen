@@ -1,0 +1,12 @@
+@import "helper";
+
+.title {
+  border: 1px solid #103852;
+  color: #ddd;
+  background: #081823;
+  height: px(15);
+  font-size: px(7);
+  padding-left: 6px;
+  display: flex;
+  align-items: center;
+}
