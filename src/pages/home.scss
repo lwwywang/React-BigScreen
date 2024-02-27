@@ -30,7 +30,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(90deg, rgba(16, 48, 65, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(16, 48, 65, 1) 100%);
+            background: linear-gradient(90deg, rgba(16, 48, 65, 1) 0%, rgba(0, 0, 0, 0) 25%, rgba(26, 58, 75, 1) 50%, rgba(0, 0, 0, 0) 75%, rgba(16, 48, 65, 1) 100%);
         }
 
         .clock {
@@ -82,6 +82,7 @@
             position: relative;
             box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
             background: rgba(31, 59, 70, 0.35);
+            text-align: center;
 
 
             &::before {
@@ -103,9 +104,6 @@
             }
         }
 
-        >section {
-            text-align: center;
-        }
 
         .bordered {
             border: 1px solid #0764bc;
@@ -114,23 +112,6 @@
             box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
             background: #0c1139;
 
-            &::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                top: 0;
-                border-radius: 4px;
-                box-shadow: 17px 0 0 -16px #0e325f,
-                    -17px 0 0 -16px #0e325f,
-                    0 17px 0 -16px #0e325f,
-                    0 -17px 0 -16px #0e325f,
-                    9px 0 0 -8px #0d4483,
-                    -9px 0 0 -8px #0d4483,
-                    0 9px 0 -8px #0d4483,
-                    0 -9px 0 -8px #0d4483, ;
-            }
         }
 
         .section1 {
@@ -150,6 +131,7 @@
 
         .section2 {
             grid-area: box2;
+            position: relative;
 
             .chart {
                 height: px(240);
@@ -199,6 +181,82 @@
                     }
                 }
             }
+
+            >span {
+                font-size: px(6);
+                position: absolute;
+                bottom: px(52);
+                left: px(10);
+                color: #eee;
+            }
+
+            >.ring {
+                border: 1px solid #0c2939;
+                position: absolute;
+                bottom: px(66);
+                left: px(14);
+                width: px(32);
+                height: px(32);
+                border-bottom: none;
+                border-radius: 50%;
+                overflow: hidden;
+                animation: spin infinite 5s linear;
+
+                >.radar {
+                    border: 2px solid #103142;
+                    position: absolute;
+                    width: px(27);
+                    height: px(27);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: px(14);
+                        height: px(14);
+                        border: 2px solid #082132;
+                        border-radius: 50%;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: px(1);
+                        height: px(12);
+                        z-index: 1;
+                        background: #007cc0;
+                        border-radius: 50%;
+                        box-shadow: 0 0 5px 1px #0094e4,
+                            -3px -10px 5px 1px #0094e4,
+                            -7px -15px 10px 1px #0094e4,
+                            -3px -3px 10px 1px #0094e4,
+                            -7px -7px 20px 1px #0094e4,
+                            -11px -11px 30px 1px #0094e4,
+                            -11px -11px 40px 1px #0094e4,
+                            -11px -11px 30px 1px #0094e4,
+                            -11px -11px 30px 1px #0094e4;
+                    }
+                }
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
         }
 
         .section3 {
@@ -216,6 +274,13 @@
             }
         }
 
+        >p {
+            font-size: px(7);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
     }
 }

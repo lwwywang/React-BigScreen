@@ -31,13 +31,17 @@ export const Home = () => {
           <Chart3 />
         </section>
         <section className="section2">
+          <Statistic />
           <Chart4 />
-          <Statistic/>
+          <div className="ring">
+            <div className="radar" />
+          </div>
+          <span>数据实时监控中</span>
         </section>
         <section className="section3">
-          <Chart5/>
-          <Chart6/>
-          <Chart7/>
+          <Chart5 />
+          <Chart6 />
+          <Chart7 />
         </section>
       </main>
     </div>
