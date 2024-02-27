@@ -8,7 +8,7 @@ const px = (n) => n / 800 * (window as any).pageWidth;
 export const Chart2 = () => {
     const divRef = useRef(null);
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        const myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
             legend: {
                 bottom: px(0),
@@ -18,8 +18,8 @@ export const Chart2 = () => {
             },
             grid: {
                 x: px(0),
-                x2: px(15),
-                y: px(10),
+                x2: px(8),
+                y: px(8),
                 y2: px(14),
                 containLabel: true
             },

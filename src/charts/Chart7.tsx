@@ -15,8 +15,9 @@ export const Chart7 = () => {
         { value: 0.06, name: '庆阳路' },
     ];
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        const myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
+            color: ['#3597d4', '#3559a7', '#f6b044', '#ea5c5a', '#3ab059'],
             xAxis: { show: false },
             yAxis: { show: false },
             grid: { x: 0, x2: 0, y: 0, y2: 0, containLabel: true },

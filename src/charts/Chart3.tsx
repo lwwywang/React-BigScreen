@@ -7,8 +7,9 @@ const px = (n) => n / 800 * (window as any).pageWidth;
 export const Chart3 = () => {
     const divRef = useRef(null);
     useEffect(() => {
-        var myChart = echarts.init(divRef.current);
+        const myChart = echarts.init(divRef.current);
         myChart.setOption(createEchartsOptions({
+            color: ['#3597d4', '#3559a7', '#f6b044', '#ea5c5a', '#3ab059', '#fdfdfd'],
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
