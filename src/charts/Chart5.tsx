@@ -13,7 +13,7 @@ export const Chart5 = () => {
             color: ['#3597d4', '#3559a7', '#f6b044', '#ea5c5a', '#3ab059', '#fdfdfd'],
             legend: {
                 left: px(12),
-                top: px(4),
+                top: px(9),
                 orient: 'vertical',
                 textStyle: { color: 'white' },
                 itemWidth: px(6),
@@ -25,7 +25,7 @@ export const Chart5 = () => {
             series: [
                 {
                     left: px(30),
-                    top: px(4),
+                    top: px(5),
                     type: 'pie',
                     radius: ['75%', '90%'],
                     avoidLabelOverlap: false,

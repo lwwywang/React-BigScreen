@@ -10,6 +10,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px 1px #103852;
+    overflow: hidden;
 
     header {
         height: px(30);
@@ -18,7 +19,7 @@
         align-items: center;
         color: #eee;
         font-size: px(15);
-        background: linear-gradient(90deg, rgba(8, 24, 35, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(8, 24, 35, 1) 100%);
+        background: linear-gradient(90deg, rgba(16, 48, 65, 1) 0%, rgba(0, 0, 0, 0) 25%, rgba(16, 48, 65, 1) 50%, rgba(0, 0, 0, 0) 75%, rgba(16, 48, 65, 1) 100%);
         position: relative;
         text-shadow: 0 0 10px #1d393d, 0 0 20px #1d393d, 0 0 30px #1d393d, 0 0 40px #1d393d;
 

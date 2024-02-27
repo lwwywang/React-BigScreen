@@ -17,7 +17,7 @@ export const Home = () => {
     <div className="home">
       <header>
         <Clock />
-        <span>国家公安合成作战平台</span>
+        <span>国家公安作战平台</span>
         <div className="info">
           <Icon name="position" /> Jilin, China
           <Icon name="weather" /> -10℃ snowing

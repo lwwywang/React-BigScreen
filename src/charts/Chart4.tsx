@@ -12,6 +12,7 @@ export const Chart4 = () => {
         // @ts-ignore
         echarts.registerMap('CN', china);
         myChart.setOption(createEchartsOptions({
+            color: ['#4ba2a7', '#3559a7', '#f6b044', '#ea5c5a', '#3ab059', '#fdfdfd'],
             xAxis: { show: false },
             yAxis: { show: false },
             series: [
@@ -20,7 +21,7 @@ export const Chart4 = () => {
                     mapType: 'CN',
                     label: { show: false, color: 'white' },
                     itemStyle: {
-                        areaColor: 'rgba(48, 88, 101, 0.6)',
+                        areaColor: 'rgba(56, 105, 112, 0.6)',
                         borderColor: '#376c78',
                         emphasis: {
                             label: { color: 'white' },
